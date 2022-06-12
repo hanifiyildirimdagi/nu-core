@@ -26,7 +26,6 @@ export default class Dictionary<K, V> extends Array<DictionaryItem<K, V>> {
   public setValue(key: K, newValue: V): void {
     const i = super.findIndex((x) => x.Key === key);
     if (i == -1) return;
-    let lastValue = this[i];
     this[i].Value = newValue;
   }
 
@@ -47,5 +46,15 @@ export default class Dictionary<K, V> extends Array<DictionaryItem<K, V>> {
       result.add(keys[i], value);
     }
     return result;
+  }
+
+  // TODO?: Add a summary
+  public toValueList(): Array<V> {
+    return this.map((x) => x.Value);
+  }
+
+  // TODO?: Add a summary
+  public toKeyList(): Array<K> {
+    return this.map((x) => x.Key);
   }
 }

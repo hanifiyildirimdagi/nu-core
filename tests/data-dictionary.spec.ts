@@ -23,15 +23,15 @@ describe("Data | Dictionary", () => {
     let dict1 = new Dictionary<number, string>();
     dict1.add(1, "One");
     dict1.add(2, "Two");
-    dict1.add(3, "Tree");
+    dict1.add(3, "three");
     expect(dict1.getValue(1)).equal("One");
-    expect(dict1.getValue(3)).equal("Tree");
+    expect(dict1.getValue(3)).equal("three");
     let dict2 = new Dictionary<string, number>();
     dict2.add("One", 1);
     dict2.add("Two", 2);
-    dict2.add("Tree", 3);
+    dict2.add("three", 3);
     expect(dict2.getValue("One")).equal(1);
-    expect(dict2.getValue("Tree")).equal(3);
+    expect(dict2.getValue("three")).equal(3);
     let dict3 = new Dictionary<
       number,
       { name: string; lastName: string; userName: string }
@@ -61,6 +61,20 @@ describe("Data | Dictionary", () => {
     dict1.add(1, "One");
     dict1.push(new DictionaryItem(2, "Two"));
     expect(dict1.length).to.equal(2);
+  });
+  it("Workflow | Methods - toKeyList", () => {
+    let dict = new Dictionary<number,string>();
+    dict.add(1,"One");
+    dict.add(2,"Two");
+    dict.add(3,"three");
+    expect(dict.toKeyList()[0]).to.equal(1);
+  });
+  it("Workflow | Methods - toValueList", () => {
+    let dict = new Dictionary<number,string>();
+    dict.add(1,"One");
+    dict.add(2,"Two");
+    dict.add(3,"three");
+    expect(dict.toValueList()[0]).to.equal("One");
   });
   it("Workflow | Static Methods - fromObject", () => {
     const obj = {
