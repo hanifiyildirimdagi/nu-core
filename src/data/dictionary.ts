@@ -1,4 +1,4 @@
-// TODO?: Add summary
+// TODO?: Add a summary
 export class DictionaryItem<K, V> {
   constructor(public Key: K, public Value: V) {}
   public toJSON(): string {
@@ -6,23 +6,23 @@ export class DictionaryItem<K, V> {
   }
 }
 
-// TODO?: Add summary
+// TODO?: Add a summary
 export default class Dictionary<K, V> extends Array<DictionaryItem<K, V>> {
   constructor() {
     super();
   }
 
-  // TODO?: Add summary
+  // TODO?: Add a summary
   public add(key: K, value: V): number {
     return super.push(new DictionaryItem<K, V>(key, value));
   }
 
-  // TODO?: Add summary
+  // TODO?: Add a summary
   public getValue(objectKey: K): V | undefined {
     return super.find((x: DictionaryItem<K, V>) => x.Key === objectKey)?.Value;
   }
 
-  // TODO?: Add summary
+  // TODO?: Add a summary
   public setValue(key: K, newValue: V): void {
     const i = super.findIndex((x) => x.Key === key);
     if (i == -1) return;
@@ -30,6 +30,7 @@ export default class Dictionary<K, V> extends Array<DictionaryItem<K, V>> {
     this[i].Value = newValue;
   }
 
+  // TODO?: Add a summary
   public static fromObject<T extends Object>(obj: T): Dictionary<string, any> {
     if (typeof obj === "string")
       throw new Error("Data cannot be returned from a String type.");
