@@ -1,7 +1,7 @@
 {
-  "name": "nu-core",
+  "name": "necessary-utils-nu-core",
   "version": "1.0.0",
-  "description": "",
+  "description": "Necessary utils for the NodeJS projects.",
   "main": "dist/index.umd.min.js",
   "module": "dist/index.es.js",
   "types": "dist/main.d.ts",
@@ -23,6 +23,13 @@
     "url": "https://github.com/hanifiyildirimdagi/nu-core/issues"
   },
   "homepage": "https://github.com/hanifiyildirimdagi/nu-core#readme",
+  "contributors": [
+    {
+      "email": "iletisim@hanifiyildirimdagi.com",
+      "name": "Hanifi YILDIRIMDAĞI",
+      "url": "https://github.com/hanifiyildirimdagi"
+    }
+  ],
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@rollup/plugin-babel": "^5.3.1",
