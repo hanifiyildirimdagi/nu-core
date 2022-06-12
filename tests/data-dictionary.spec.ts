@@ -59,7 +59,17 @@ describe("Data | Dictionary", () => {
   it("Workflow | Superior methods", () => {
     let dict1 = new Dictionary<number, string>();
     dict1.add(1, "One");
-    dict1.push(new DictionaryItem(2,"Two"));
+    dict1.push(new DictionaryItem(2, "Two"));
     expect(dict1.length).to.equal(2);
+  });
+  it("Workflow | Static Methods - fromObject", () => {
+    const obj = {
+      foo: "bar",
+      foo2: "bar2",
+    };
+    let dict: Dictionary<string, any> = Dictionary.fromObject(obj);
+    expect(dict.length).to.equal(2);
+    expect(dict.getValue("foo2")).to.equal("bar2");
+    expect(dict[0].Key).equal("foo")
   });
 });
