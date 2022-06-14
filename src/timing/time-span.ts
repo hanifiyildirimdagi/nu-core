@@ -1,3 +1,7 @@
+/**
+ * ## TimeSpan
+ * Also, this class helps you generate the millisecond values you need.
+ */
 export default class TimeSpan {
   private _hour: number = 0;
   private _minute: number = 0;
