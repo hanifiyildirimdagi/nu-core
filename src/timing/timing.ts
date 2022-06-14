@@ -21,20 +21,18 @@ export default class Timing {
    * @static
    * @param callback : CancellationWorkCallback
    * @example
-   * > Example
-   * >
-   * > import { Timing } from "necessary-utils-core";
-   * >
-   * > const work = () => {
-   * >   console.log("Hello.");
-   * > };
-   * > Timing.CancellationWork(work, 1000);
-   * > Timing.CancellationWork(work, 1000);
-   * > Timing.CancellationWork(work, 1000);
-   * > Timing.CancellationWork(work, 1000);
-   * > Timing.CancellationWork(work, 1000);
-   * > // Output : Hello. One time.
-   * >
+   *
+   * import { Timing } from "necessary-utils-core";
+   *
+   * const work = () => {
+   *   console.log("Hello.");
+   * };
+   * Timing.CancellationWork(work, 1000);
+   * Timing.CancellationWork(work, 1000);
+   * Timing.CancellationWork(work, 1000);
+   * Timing.CancellationWork(work, 1000);
+   * Timing.CancellationWork(work, 1000);
+   * // Output : Hello. One time.
    */
   public static CancellationWork = (function () {
     let timer: NodeJS.Timeout;
