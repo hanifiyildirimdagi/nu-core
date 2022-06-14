@@ -1,4 +1,84 @@
 export default class TimeSpan {
+  private _hour: number = 0;
+  private _minute: number = 0;
+  private _second: number = 0;
+  private _millisecond: number = 0;
+
+  public get Hour(): number {
+    return this._hour;
+  }
+  public set Hour(value: number) {
+    if (value >= 0) {
+      this._hour = value;
+      return;
+    }
+    throw new Error("Hour value cannot be negative.");
+  }
+
+  public get Minute(): number {
+    return this._minute;
+  }
+  public set Minute(value: number) {
+    if (value >= 0) {
+      this._minute = value;
+      return;
+    }
+    throw new Error("Minute value cannot be negative.");
+  }
+
+  public get Second(): number {
+    return this._second;
+  }
+  public set Second(value: number) {
+    if (value >= 0) {
+      this._second = value;
+      return;
+    }
+    throw new Error("Second value cannot be negative.");
+  }
+
+  public get Millisecond(): number {
+    return this._millisecond;
+  }
+  public set Millisecond(value: number) {
+    if (value >= 0) {
+      this._millisecond = value;
+      return;
+    }
+    throw new Error("Millisecond value cannot be negative.");
+  }
+
+  constructor(
+    hour: number = 0,
+    minute: number = 0,
+    second: number = 0,
+    millisecond: number = 0
+  ) {
+    this.Hour = hour;
+    this.Minute = minute;
+    this.Second = second;
+    this.Millisecond = millisecond;
+  }
+
+  // TODO?: Add a summary
+  public Tricks(): number {
+    return (
+      TimeSpan.FromHour(this.Hour) +
+      TimeSpan.FromMinute(this.Minute) +
+      TimeSpan.FromSecond(this.Second) +
+      this.Millisecond
+    );
+  }
+
+  // TODO?: Add a summary
+  public SetToDate(date: Date): Date {
+    date.setHours(this.Hour);
+    date.setMinutes(this.Minute);
+    date.setSeconds(this.Second);
+    date.setMilliseconds(this.Millisecond);
+    return date;
+  }
+
   public static FromSecond(seconds: number): number {
     return seconds * 1000;
   }
