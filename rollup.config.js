@@ -19,7 +19,7 @@ export default [
     output: {
       file: "dist/index.umd.min.js",
       format: "umd",
-      name: "nu-basic-queue",
+      name: "nu-core",
       indent: false,
     },
     plugins: [
