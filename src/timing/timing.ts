@@ -1,11 +1,12 @@
 export default class Timing {
-  //TODO?: Add a summary
   /**
+   * ## Sleep
+   * This static method allows you to wait a certain amount of time with the async/await method.
    * @param ms
    * @example await Wait(1000) | await Wait(TimeSpan.FromSeconds(1))
    * @example
    * doSomething...
-   * await Wait(TimeSpan.FromMinute(1))
+   * await Timing.Wait(TimeSpan.FromMinute(1))
    * continue...
    */
   public static async Sleep(ms: number): Promise<unknown> {
@@ -14,9 +15,9 @@ export default class Timing {
 
   /**
    * ## CancellationWork
-   * This static method allows a job to be done only once, within a period of time you specify. 
-   * For example, you produce a console output every time a character is entered into the input box. 
-   * But you want to produce results when the user is no longer entering data for a second. 
+   * This static method allows a job to be done only once, within a period of time you specify.
+   * For example, you produce a console output every time a character is entered into the input box.
+   * But you want to produce results when the user is no longer entering data for a second.
    * You can use `CancellationWork` for this and similar operations.
    * @static
    * @param callback : CancellationWorkCallback
