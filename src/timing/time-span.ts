@@ -65,7 +65,7 @@ export default class TimeSpan {
   }
 
   // TODO?: Add a summary
-  public Tricks(): number {
+  public Ticks(): number {
     return (
       TimeSpan.FromHour(this.Hour) +
       TimeSpan.FromMinute(this.Minute) +

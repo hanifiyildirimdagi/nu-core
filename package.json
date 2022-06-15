@@ -38,21 +38,18 @@
       "url": "https://github.com/hanifiyildirimdagi"
     }
   ],
-  "dependencies": {
-    "rollup": "^2.75.6",
-    "typescript": "next"
-  },
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@rollup/plugin-babel": "^5.3.1",
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.1",
+    "@types/node": "*",
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
+    "rollup": "^2.75.6",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.32.1",
     "ts-node": "^10.8.1",
-    "rollup": "^2.75.6",
-    "typescript": "next"
+    "typescript": "^4.7.3"
   }
 }
