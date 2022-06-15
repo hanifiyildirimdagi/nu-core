@@ -10,8 +10,9 @@
   ],
   "type": "commonjs",
   "scripts": {
-    "build-publish": "yarn rollup -c",
-    "test": "mocha"
+    "build": "yarn rollup -c",
+    "test": "mocha",
+    "release":"yarn test && yarn build"
   },
   "keywords": [
     "typescript",
