@@ -1,6 +1,11 @@
 // TODO?: Add a summary
 export class DictionaryItem<K, V> {
-  constructor(public Key: K, public Value: V) {}
+  public Key: K;
+  public Value: V;
+  constructor(key: K, value: V) {
+    this.Key = key;
+    this.Value = value;
+  }
   public toJSON(): string {
     return JSON.stringify(this);
   }
