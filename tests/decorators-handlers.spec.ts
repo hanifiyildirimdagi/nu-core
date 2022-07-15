@@ -38,16 +38,9 @@ describe("Handler Decorators", () => {
       TempClass.TestMethod("name");
     }).not.throw();
   });
-  it("It must return throw when using sync method", () => {
-    expect(async () => {
-      await TempClass.TestMethod3();
-    }).throw();
-  });
+
   it("It must return value when using sync method", () => {
     expect(TempClass.TestMethod2("test")).to.equal("test - true");
   });
-  it("It must not return throw when using async method", async () => {
-    const result = await TempClass.TestMethod4();
-    expect(result).to.equal(undefined);
-  });
+
 });
